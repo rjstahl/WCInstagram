@@ -15,14 +15,21 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
 }
 header {
     background: #fff;
+    padding: 1em 0;
 }
 .header__logo {
     font-size: 2em;
     font-family: 'Cookie', cursive;
+}
+/*profile area styles */
+.profile__image {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
 }
 .button {
     color: #4090db;
@@ -36,7 +43,4 @@ background:#4090db;
 color: white;
 border-color: #4090db ;
 border-radius: 8px;
-}
-.profile {
-
 }
