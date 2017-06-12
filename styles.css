@@ -1,0 +1,42 @@
+/* Rest issue where padding isn't included in dimensions of the element */
+html{
+    box-sizing: border-box;
+}
+*,*:before *, after{
+    box-sizing: inherit;
+}
+body{
+    background: #dbd9d9;
+    margin: 0;
+}
+.inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+header {
+    background: #fff;
+}
+.header__logo {
+    font-size: 2em;
+    font-family: 'Cookie', cursive;
+}
+.button {
+    color: #4090db;
+    text-decoration: none;
+    border: 1px solid currentColor;
+    padding: .5em 1em;
+    
+}
+.button--blue {
+background:#4090db;
+color: white;
+border-color: #4090db ;
+border-radius: 8px;
+}
+.profile {
+
+}
