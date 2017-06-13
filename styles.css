@@ -6,6 +6,7 @@ html{
     box-sizing: inherit;
 }
 body{
+    font-family: 'Open Sans', Arial, sans-serif;
     background: #dbd9d9;
     margin: 0;
 }
@@ -15,6 +16,18 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.images .inner {
+    flex-wrap: wrap;
+}
+@supports(display: grid) or (display: -ms-grid){
+.images .inner {
+display: -ms-grid;
+display: grid;
+-ms-grid-template-columns: 1fr 1fr 1fr;
+grid-template-columns: 1fr 1fr 1fr;
+grid-gap: 1em;
+}
 }
 header {
     background: #fff;
@@ -38,7 +51,7 @@ header {
 }
 .profile__meta{
     display:flex;
-     list-style: none;
+    list-style: none;
     padding: 0;
     flex-wrap: wrap;
 }
@@ -57,4 +70,7 @@ background:#4090db;
 color: white;
 border-color: #4090db ;
 border-radius: 8px;
+}
+img {
+    max-width: 100%;
 }
