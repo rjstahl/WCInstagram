@@ -60,6 +60,11 @@ header {
     left: 0;
     right: 0;
     z-index: 999;
+    transition: padding 1s;
+}
+.header--small {
+   padding: .1em 0; 
+  
 }
 .header__logo {
     font-size: 2em;
@@ -115,4 +120,31 @@ header {
 }
 img {
     max-width: 100%;
+}
+@media(max-width: 1000px){
+    .inner {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+@media(max-width: 630px){
+    .images .inner {
+    -ms-grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: .5em;
+     }
+    .profile__image {
+        width: 100px;
+        height: 100px;
+        flex: 0 1 50%;
+    }
+   .profile .inner {
+        flex-direction: column;
+    }
+    header .inner{
+        flex-wrap: wrap;
+    }
+    .header__search {
+        order: 1;
+    }
 }

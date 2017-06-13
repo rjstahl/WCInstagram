@@ -16,7 +16,7 @@
       <div class="inner">
         <div class="header__logo">Instagram
         </div>
-        <div>
+        <div class="header__search">
             <input type="text" placeholder="e.g. People" >
         </div>
         <div>
@@ -67,6 +67,18 @@
                     <span class="image__cover">View Image</span>
                </a>
             </div>  
-      </div>    
+      </div>   
+      <script>
+          window.addEventListener('scroll',function(){
+              var distance = window.pageYOffset || document.documentElement.scrollTop
+            
+              var header = document.querySelector('header')
+              if(distance > 200){
+                  header.classList.add('header--small')
+                 } else {
+                    header.classList.remove('header--small')
+                 }
+            })
+      </script> 
 </body>
 </html>
