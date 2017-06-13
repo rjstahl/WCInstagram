@@ -30,6 +30,20 @@ header {
     overflow: hidden;
     width: 200px;
     height: 200px;
+    flex: 0 0 200px;
+   }
+.profile__info {
+     flex: 1 1 auto;
+     margin: .5em 1.5em;
+}
+.profile__meta{
+    display:flex;
+     list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+}
+.profile__meta li{
+    margin-right: 2em;
 }
 .button {
     color: #4090db;
