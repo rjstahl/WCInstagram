@@ -143,6 +143,7 @@ img {
     }
     header .inner{
         flex-wrap: wrap;
+        justify-content: space-around;
     }
     .header__search {
         order: 1;
