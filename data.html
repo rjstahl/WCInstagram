@@ -15,10 +15,14 @@
         })
         .then(result => {
             // Now that we have the dat, we can work with it
+            // create an emtpy array to hold random numbers
             let randoms = []
+            // Loop 20 times to get a new random number in the array
             for (let i=0; i<20; i++) {
+                // generate random: Math.round(Math.random() * N)
                 randoms.push(Math.round(Math.random()*result.length) )
             }
+            // Make an images array to store our random images
             let images = result.filter(image => {
                 return randoms.includes(image.id)
             })
