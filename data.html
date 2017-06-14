@@ -15,9 +15,14 @@
         })
         .then(result => {
             // Now that we have the dat, we can work with it
-        })
-        .catch(error => {
-
+            let randoms = []
+            for (let i=0; i<20; i++) {
+                randoms.push(Math.round(Math.random()*result.length) )
+            }
+            let images = result.filter(image => {
+                return randoms.includes(image.id)
+            })
+            console.log(randoms,images)
         })
    </script> 
 </body>
