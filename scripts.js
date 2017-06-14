@@ -17,8 +17,26 @@
                // Add a click event to the image
                // have the click event console.log(index)
                image.addEventListener('click',function(e){
-                   e.preventDefault() // stop the click event from refreshing
-                console.log(index)
+               e.preventDefault() // stop the click event from refreshing
+               // this captures the current image src property
+               const source = this.querySelector('img').src 
+               // this captures the current image number in the url
+               const id = source.split('=')[1]
+               showFullImage(id)
                })
-           
-           })
+          })
+          // function showFullImage(id) {  ... OLD WAY
+          const showFullImage = id => {
+              const fullContainer = document.querySelector('.full')
+              const fullImage = fullContainer.querySelector('img')
+              // Set the src to the fullImage to a bigger version
+              fullImage.src = `http://unsplash.it/600/?image=${id}`
+              // remove the hidden class from the fullContainer to show it
+            fullContainer.classList.remove('hidden')
+          }
+          // Add Click event to the .full DIV so it adds the hidden class when clicked
+            const fullContainer = document.querySelector('.full') 
+            fullContainer.addEventListener('click',function(){
+            fullContainer.classList.add('hidden')
+            })
+

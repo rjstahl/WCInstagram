@@ -121,6 +121,25 @@ header {
 img {
     max-width: 100%;
 }
+.full {
+    /* Position it, change the width/height, background color */
+    /* How shold it "display" the children maybe in fexible way? */
+    background: rgba(0,0,0,.7);
+    width: 100%;
+    height: 100%;
+    /* position fixed instead of absolute so it doesn't scroll but covers the scrolling part */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hidden {
+    display: none;
+}
+
 @media(max-width: 1000px){
     .inner {
         padding-left: 1em;
