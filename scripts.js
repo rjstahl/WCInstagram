@@ -37,7 +37,7 @@ function addErrorEvents () {
         image.addEventListener('error', () =>{
            //const next = Math.round(Math.random()*1000)
            //this.src = `http://unsplast.it/300/?image = ${next}`
-           image.src = `http://unsplash.it/300/?image = 580`
+           image.src = `https://unsplash.it/300/?image = 580`
         })
     })
 
@@ -47,7 +47,7 @@ function addErrorEvents () {
     const fullContainer = document.querySelector('.full')
     const fullImage = fullContainer.querySelector('img')
     // Set the src to the fullImage to a bigger version
-    fullImage.src = `http://unsplash.it/600/?image=${id}`
+    fullImage.src = `https://unsplash.it/600/?image=${id}`
     // remove the hidden class from the fullContainer to show it
     fullContainer.classList.remove('hidden')
 }
@@ -65,7 +65,7 @@ function addErrorEvents () {
 // Then grab 20 random images 
 // then add images to HTML and call addClickEvents
 // Use fetch() to load remote data - utilizies promises
-    fetch('http://unsplash.it/list')
+    fetch('https://unsplash.it/list')
         // after done loading it does the next step
         .then(result => {
         return result.json() // convert the text to json data
@@ -102,7 +102,7 @@ function addErrorEvents () {
         // maybe just console.log something to make sure it is working
         imageArray.forEach((image, index) =>{
             const html = `<a href="" class="image">
-                    <img src="http://unsplash.it/300/?image=${image.id}" alt="${image.author}">
+                    <img src="https://unsplash.it/300/?image=${image.id}" alt="${image.author}">
                     <span class="image__cover">View Image</span>
                     </a>`
             imageContainer.innerHTML += html
