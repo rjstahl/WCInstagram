@@ -31,7 +31,8 @@ body{
 }
 .image {
     position: relative;
-    line-height: 0;
+    /* causes issue image text line-height: 0; */
+    display: inherit;
     overflow: hidden; 
 }
 .image__cover {

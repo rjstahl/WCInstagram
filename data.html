@@ -8,18 +8,20 @@
 </head>
 <body>
    <script>
-     // Use fetch() to load remote data
+     // Use fetch() to load remote data - utilizies promises
      fetch('http://unsplash.it/list')
+        // after done loading it does the next step
         .then(result => {
             return result.json() // convert the text to json data
         })
+        // next then done
         .then(result => {
-            // Now that we have the dat, we can work with it
+            // Now that we have the data, we can work with it
             // create an emtpy array to hold random numbers
             let randoms = []
             // Loop 20 times to get a new random number in the array
             for (let i=0; i<20; i++) {
-                // generate random: Math.round(Math.random() * N)
+                // generate random: Math.round(Math.random() * 30).. 30 is the number of results we want
                 randoms.push(Math.round(Math.random()*result.length) )
             }
             // Make an images array to store our random images
